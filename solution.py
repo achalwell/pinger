@@ -131,8 +131,8 @@ def ping(host, timeout=1):
     for i in range(0,4):
 
         delay = doOnePing(dest, timeout)
-        list.append(delay)
         print(delay)
+        list.append(delay)
 
         time.sleep(1)  # one second
         vars = ([str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)),str(round(statistics.stdev(stdev_var), 2))])
