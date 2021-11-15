@@ -127,6 +127,8 @@ def ping(host, timeout=1):
     packet_max = "max(list)*1000"
     packet_avg = "statistics.mean(list)*1000"
     stdev_var = "statistic.stdev(list)*1000"
+    
+    vars = ([str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)),str(round(statistics.stdev(stdev_var), 2))])
 
     for i in range(0,4):
 
@@ -135,9 +137,8 @@ def ping(host, timeout=1):
         list.append(i)
 
         time.sleep(1)  # one second
-        vars = float([str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)),str(round(statistics.stdev(stdev_var), 2))])
-
         
+     
     return vars
 
 
