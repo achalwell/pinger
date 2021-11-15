@@ -123,10 +123,10 @@ def ping(host, timeout=1):
     # Send ping requests to a server separated by approximately one second
     list = []
     
-    packet_min = min(list)*1000
-    packet_max = max(list)*1000
-    packet_avg = statistics.mean(list)*1000
-    stdev_var = statistic.stdev(list)*1000
+    packet_min = "min(list)*1000"
+    packet_max = "max(list)*1000"
+    packet_avg = "statistics.mean(list)*1000"
+    stdev_var = "statistic.stdev(list)*1000"
 
     for i in range(0,4):
 
