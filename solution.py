@@ -131,10 +131,10 @@ def ping(host, timeout=1):
 
         time.sleep(1)  # one second
         
-    packet_min = min(list)
-    packet_max = max(list)
-    packet_avg = statistics.mean(list)
-    stdev_var = (list)
+    packet_min = min(list)*1000
+    packet_max = max(list)*1000
+    packet_avg = statistics.mean(list)*1000
+    stdev_var = (list)*1000
     vars = ([str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)),str(round(statistics.stdev(stdev_var), 2))])
       
     return vars
